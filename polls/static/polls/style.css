@@ -1,0 +1,220 @@
+*, *:before, *:after {
+  /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+  	box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+body{
+	width: 100vw;
+    height: 100vh;
+	font-size: 62.5%; /* 10px */
+	overflow-y: scroll; /* Keeps page centred in all browsers regardless of content height */
+	-webkit-text-size-adjust: 100%; /* Prevents iOS text size adjust after orientation change, without disabling user zoom */
+	-ms-text-size-adjust: 100%; /* www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/ */
+}
+body {
+	background: rgba(194,194,194,1);
+	background: -moz-radial-gradient(center, ellipse cover, rgba(194,194,194,1) 0%, rgba(52,60,77,1) 100%);
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(194,194,194,1)), color-stop(100%, rgba(52,60,77,1)));
+	background: -webkit-radial-gradient(center, ellipse cover, rgba(194,194,194,1) 0%, rgba(52,60,77,1) 100%);
+	background: -o-radial-gradient(center, ellipse cover, rgba(194,194,194,1) 0%, rgba(52,60,77,1) 100%);
+	background: -ms-radial-gradient(center, ellipse cover, rgba(194,194,194,1) 0%, rgba(52,60,77,1) 100%);
+	background: radial-gradient(ellipse at center, rgba(194,194,194,1) 0%, rgba(52,60,77,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c2c2c2', endColorstr='#343c4d', GradientType=1 );
+}
+header{
+	margin:inherit;
+	align-content: center;
+	justify-self: center;
+	text-align: center;
+	width: 100%;
+	font-size: 4em;
+
+	color:white;
+}
+header div{
+	background-color: #7698e7;
+	font-weight: bold;
+	color: whitesmoke;
+	width: 80%;
+	margin:0 auto;
+	border-radius: 25px;
+}
+
+/* grid configuration*/
+
+.wrapper{
+	display: grid;
+	grid-template-columns: 0.5fr 0.5fr 1fr 1fr 1fr 0.5fr 0.5fr;
+	grid-template-rows: 50px auto;
+	position: relative;
+}
+
+#left-side{
+	grid-column: 1/3;
+}
+#main-block{
+	grid-column: 3/6;
+	grid-row: 2;
+	align-content: center;
+}
+#right-side{
+	grid-column: 6/8;
+}
+footer {
+	margin-top:1.5vh;
+	align-content: center;
+	justify-self: center;
+	text-align: center;
+	position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+	padding: 3vh;
+	background-color: #4d5e4d;
+}
+
+/* end of grid configuration*/
+.title{
+		text-align: center;
+}
+h1 {
+	border-radius: 25px 25px 0 0  ;
+	background-color: #a8a6a1;
+	padding-bottom: 1vh;
+	color:white;
+}
+
+#main-block ul{
+	/*box-shadow: 0px 10px 17px 0px rgba(184,184,184,1);*/ /*thanks to https://www.cssmatic.com/box-shadow */
+}
+
+#main-block ul li a{
+	font-size: 1.25rem;
+}
+ol,ul {
+	list-style: none;
+	padding-bottom: 1vh;
+	background-color: white;
+}
+li {
+	margin-left: 2vw;
+
+}
+#index_wrapper{
+	border-radius: 0 0 25px 25px;
+}
+#index_wrapper ul{
+	background-color: rgb(0,0,0,0);
+}
+.card{
+	margin-top: 2vh;
+	justify-content: center;
+	box-shadow: 0 0 0 0 rgb(0, 0, 0, 0);
+}
+.card li{
+	display: flex;
+	justify-content: center;
+	margin-left: 0;
+
+}
+.card li a{
+	background-color: white;
+	box-shadow: 0px 10px 17px 0px rgba(184,184,184,1);
+	padding: 1.5vw;
+	margin-bottom: 0;
+	width: 100%;
+	text-align: center;
+
+}
+.card:hover{
+	-webkit-transform:scale(1.05);
+	-moz-transform:scale(1.05);
+	-ms-transform:scale(1.05);
+	-o-transform:scale(1.05);
+	transform:scale(1.05);
+}
+form{
+	background-color: white;
+	border-radius: 0 0 25px 25px;
+}
+
+.results {
+	background-color: white;
+	font-size: 1.5rem;
+}
+div #ul_results{
+	background-color: white;
+}
+.choices{
+	display: flex;
+	margin-left: 2vh;
+	padding-top: 3vh;
+	background-color: white;
+}
+.choices div{
+	margin:0 auto;
+
+}
+.choices li{
+	margin:0 auto;
+	justify-content: center;
+	background-color: white;
+
+}
+.submit_button{
+	display: flex;
+	justify-content: center;
+	margin-top: 2vh;
+
+}
+
+.submit_button input{
+	background-color: darkslategray;
+	color: white;
+	border-radius:10px;
+	padding: 0.5vw;
+	margin-bottom: 2vh;
+}
+.submit_button input:hover{
+	background-color: seagreen;
+}
+
+
+label{
+	font-size: 1.25rem;
+}
+p strong{
+	background-color: white;
+}
+
+
+a {
+	text-decoration: none;
+}
+a:hover,
+a:focus,
+a:active {
+	color: #422f41;
+	text-decoration: none;
+}
+a:hover,
+a:active {
+	outline: 0;
+}
+a:focus {
+	outline: thin dotted;
+}
+a img {
+	border: 0;
+}
+.entry-content a {
+	text-decoration: underline;
+}
+.entry-content a:hover,
+.entry-content a:focus {
+	text-decoration: none;
+}
+
+
